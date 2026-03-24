@@ -7,53 +7,104 @@
 
 <style>
 body {
-    font-family: Arial;
     margin: 0;
+    font-family: 'Georgia', serif;
     background: #f5e6c8;
+    color: #3b2f2f;
 }
 
 /* HEADER */
 header {
-    background: #8b4513;
-    color: white;
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+    padding: 60px 20px;
     text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 5px black;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* CONTAINER */
+.container {
     padding: 20px;
 }
 
-/* PRODUTOS */
-.container {
-    padding: 15px;
-}
-
+/* CARD */
 .card {
     background: #fff3d6;
-    margin-bottom: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
     padding: 15px;
-    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
-button {
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* TITULO */
+.card h2 {
+    margin: 0;
+}
+
+/* PREÇO */
+.price {
+    color: #8b0000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* DESCRIÇÃO */
+.desc {
+    font-size: 14px;
+    color: #5c4033;
+}
+
+/* BOTÃO */
+.btn {
+    display: block;
     margin-top: 10px;
     padding: 10px;
-    border: none;
     background: #c2410c;
     color: white;
-    border-radius: 5px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
-/* CARRINHO */
-.carrinho {
+/* SEÇÃO */
+.section-title {
+    margin: 20px 0 10px;
+    font-size: 22px;
+    border-bottom: 2px solid #c2410c;
+}
+
+/* WHATSAPP */
+.whatsapp {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
 }
 
-.carrinho button {
-    width: 100%;
-    background: green;
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3b2f2f;
+    color: white;
 }
 </style>
 
@@ -62,66 +113,69 @@ button {
 <body>
 
 <header>
-<h1>🍲 Cantinho do Baião</h1>
-<p>Monte seu pedido</p>
+    <h1>🍲 Cantinho do Baião</h1>
+    <p>Sabor nordestino direto na sua casa</p>
 </header>
 
 <div class="container">
 
-<div class="card">
-<h3>Só Baião - R$23,90</h3>
-<button onclick="addItem('Só Baião - R$23,90')">Adicionar</button>
-</div>
+<h2 class="section-title">🍛 Pratos</h2>
 
 <div class="card">
-<h3>Baião com Parmegiana - R$27,00</h3>
-<button onclick="addItem('Baião com Parmegiana - R$27,00')">Adicionar</button>
-</div>
-
-<div class="card">
-<h3>Baião com Linguiça - R$28,90</h3>
-<button onclick="addItem('Baião com Linguiça - R$28,90')">Adicionar</button>
+<h2>Só Baião</h2>
+<p class="price">R$ 23,90</p>
+<p class="desc">Meio kg de baião + farofa</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Só%20Baião">Pedir no WhatsApp</a>
 </div>
 
 <div class="card">
-<h3>Baião com Churrasco - R$30,00</h3>
-<button onclick="addItem('Baião com Churrasco - R$30,00')">Adicionar</button>
+<h2>Baião com Parmegiana</h2>
+<p class="price">R$ 27,00</p>
+<p class="desc">Baião + farofa + parmegiana</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Parmegiana">Pedir no WhatsApp</a>
 </div>
 
 <div class="card">
-<h3>Refrigerante - R$6,00</h3>
-<button onclick="addItem('Refrigerante - R$6,00')">Adicionar</button>
+<h2>Baião com Linguiça Mineira</h2>
+<p class="price">R$ 28,90</p>
+<p class="desc">Baião + farofa + linguiça</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Linguiça">Pedir</a>
+</div>
+
+<div class="card">
+<h2>Baião com Churrasco Misto</h2>
+<p class="price">R$ 30,00</p>
+<p class="desc">Baião + farofa + churrasco</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Churrasco">Pedir</a>
+</div>
+
+<h2 class="section-title">🥤 Bebidas</h2>
+
+<div class="card">
+<h2>Refrigerante</h2>
+<p class="price">R$ 6,00</p>
+<p class="desc">Coca, Coca Zero ou Pepsi Black</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20Refrigerante">Pedir</a>
+</div>
+
+<h2 class="section-title">➕ Extras</h2>
+
+<div class="card">
+<h2>Extras</h2>
+<p class="desc">
+Farofa (R$5) • Vinagrete (R$6) • Queijo Coalho (R$7) • Proteína (R$9)
+</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20adicionar%20extras">Adicionar</a>
 </div>
 
 </div>
 
-<!-- CARRINHO -->
-<div class="carrinho">
-<p id="lista">Nenhum item selecionado</p>
-<button onclick="enviarWhats()">🛒 Pedir no WhatsApp</button>
-</div>
+<footer>
+📞 (21) 98020-7409 <br>
+💳 Aceitamos crédito, débito e PIX
+</footer>
 
-<script>
-let pedidos = [];
-
-function addItem(item) {
-    pedidos.push(item);
-    document.getElementById("lista").innerText = pedidos.join(", ");
-}
-
-function enviarWhats() {
-    if(pedidos.length === 0){
-        alert("Escolha pelo menos um item");
-        return;
-    }
-
-    let texto = "Olá, quero pedir:\n\n";
-    pedidos.forEach(i => texto += "- " + i + "\n");
-
-    let url = "https://wa.me/5521980207409?text=" + encodeURIComponent(texto);
-    window.open(url, "_blank");
-}
-</script>
+<a class="whatsapp" href="https://wa.me/5521980207409">💬</a>
 
 </body>
 </html>
