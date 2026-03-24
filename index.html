@@ -3,79 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja Express</title>
+<title>Cantinho do Baião</title>
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #fff;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #f5e6c8;
+    color: #3b2f2f;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg,#020617,#1e293b);
-    padding: 20px;
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover;
+    padding: 60px 20px;
     text-align: center;
-}
-
-header img {
-    width: 80px;
-    margin-bottom: 10px;
+    color: white;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px black;
 }
 
-/* BUSCA */
-.search {
-    padding: 15px;
+header p {
+    font-size: 18px;
 }
 
-.search input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-}
-
-/* GRID */
+/* CONTAINER */
 .container {
-    padding: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 15px;
+    padding: 20px;
 }
 
 /* CARD */
 .card {
-    background: #1e293b;
+    background: #fff3d6;
     border-radius: 15px;
-    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+/* TITULO */
+.card h2 {
+    margin: 0;
 }
 
-.card-content {
-    padding: 10px;
-}
-
+/* PREÇO */
 .price {
-    color: #4ade80;
+    color: #8b0000;
     font-weight: bold;
+    font-size: 20px;
+}
+
+/* DESCRIÇÃO */
+.desc {
+    font-size: 14px;
+    color: #5c4033;
 }
 
 /* BOTÃO */
@@ -83,11 +72,18 @@ header h1 {
     display: block;
     margin-top: 10px;
     padding: 10px;
-    text-align: center;
-    background: #16a34a;
+    background: #c2410c;
     color: white;
-    text-decoration: none;
+    text-align: center;
     border-radius: 8px;
+    text-decoration: none;
+}
+
+/* SEÇÃO */
+.section-title {
+    margin: 20px 0 10px;
+    font-size: 22px;
+    border-bottom: 2px solid #c2410c;
 }
 
 /* WHATSAPP */
@@ -98,97 +94,85 @@ header h1 {
     background: #25D366;
     padding: 15px;
     border-radius: 50%;
-    font-size: 20px;
+    color: white;
+    font-size: 22px;
     text-decoration: none;
 }
 
 /* RODAPÉ */
 footer {
     text-align: center;
-    padding: 15px;
-    color: #94a3b8;
+    padding: 20px;
+    background: #3b2f2f;
+    color: white;
 }
 </style>
-
-<script>
-function buscar() {
-    let input = document.getElementById("search").value.toLowerCase();
-    let cards = document.getElementsByClassName("card");
-
-    for (let i = 0; i < cards.length; i++) {
-        let texto = cards[i].innerText.toLowerCase();
-        cards[i].style.display = texto.includes(input) ? "block" : "none";
-    }
-}
-</script>
 
 </head>
 
 <body>
 
 <header>
-    <!-- TROCAR LOGO AQUI -->
-    <img src="https://via.placeholder.com/80" alt="logo">
-    <h1>Nome da Loja</h1>
-    <p>Peça rápido pelo WhatsApp</p>
+    <h1>🍲 Cantinho do Baião</h1>
+    <p>Sabor nordestino direto na sua casa</p>
 </header>
-
-<div class="search">
-<input type="text" id="search" onkeyup="buscar()" placeholder="🔎 Buscar produto...">
-</div>
 
 <div class="container">
 
-<!-- PRODUTO -->
+<h2 class="section-title">🍛 Pratos</h2>
+
 <div class="card">
-<img src="https://source.unsplash.com/300x200/?battery">
-<div class="card-content">
-<h3>Bateria 2032</h3>
-<p class="price">R$ 6,00</p>
-<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20comprar%20Bateria%202032.%20Pode%20me%20passar%20mais%20detalhes?">Comprar</a>
-</div>
+<h2>Só Baião</h2>
+<p class="price">R$ 23,90</p>
+<p class="desc">Meio kg de baião + farofa</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Só%20Baião">Pedir no WhatsApp</a>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/300x200/?charger">
-<div class="card-content">
-<h3>Carregador Turbo</h3>
-<p class="price">R$ 40,00</p>
-<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20comprar%20Carregador%20Turbo">Comprar</a>
-</div>
+<h2>Baião com Parmegiana</h2>
+<p class="price">R$ 27,00</p>
+<p class="desc">Baião + farofa + parmegiana</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Parmegiana">Pedir no WhatsApp</a>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/300x200/?usb-cable">
-<div class="card-content">
-<h3>Cabo USB Tipo C</h3>
-<p class="price">R$ 20,00</p>
-<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20comprar%20Cabo%20USB">Comprar</a>
-</div>
+<h2>Baião com Linguiça Mineira</h2>
+<p class="price">R$ 28,90</p>
+<p class="desc">Baião + farofa + linguiça</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Linguiça">Pedir</a>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/300x200/?mouse">
-<div class="card-content">
-<h3>Mouse Sem Fio</h3>
+<h2>Baião com Churrasco Misto</h2>
 <p class="price">R$ 30,00</p>
-<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20comprar%20Mouse">Comprar</a>
-</div>
+<p class="desc">Baião + farofa + churrasco</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20pedir%20Baião%20com%20Churrasco">Pedir</a>
 </div>
 
+<h2 class="section-title">🥤 Bebidas</h2>
+
 <div class="card">
-<img src="https://source.unsplash.com/300x200/?thermometer">
-<div class="card-content">
-<h3>Termômetro</h3>
-<p class="price">R$ 15,00</p>
-<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20comprar%20Termômetro">Comprar</a>
+<h2>Refrigerante</h2>
+<p class="price">R$ 6,00</p>
+<p class="desc">Coca, Coca Zero ou Pepsi Black</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20Refrigerante">Pedir</a>
 </div>
+
+<h2 class="section-title">➕ Extras</h2>
+
+<div class="card">
+<h2>Extras</h2>
+<p class="desc">
+Farofa (R$5) • Vinagrete (R$6) • Queijo Coalho (R$7) • Proteína (R$9)
+</p>
+<a class="btn" href="https://wa.me/5521980207409?text=Olá,%20quero%20adicionar%20extras">Adicionar</a>
 </div>
 
 </div>
 
 <footer>
-💳 Cartões a partir de R$10 • Pix disponível
+📞 (21) 98020-7409 <br>
+💳 Aceitamos crédito, débito e PIX
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5521980207409">💬</a>
