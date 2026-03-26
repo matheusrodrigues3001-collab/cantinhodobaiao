@@ -173,6 +173,9 @@ footer {
 
 <div class="container">
 
+<!-- 🔥 IMAGEM ADICIONADA (única alteração) -->
+<img src="logo.png" style="width:100%; max-width:400px; border-radius:12px; display:block; margin:0 auto 15px;">
+
 <h2 class="section-title">🍛 Pratos</h2>
 
 <div class="card">
@@ -274,7 +277,6 @@ footer {
 <div class="cart-items" id="cartItems"></div>
 <p id="total"></p>
 
-<!-- 🔥 NOVO: FORMA DE PAGAMENTO -->
 <div style="margin-top:10px;">
 <label><strong>Forma de pagamento:</strong></label><br>
 <select id="payment" style="width:100%; padding:8px; border-radius:8px; margin-top:5px;">
@@ -318,7 +320,6 @@ function renderCart() {
     document.getElementById("total").innerHTML = "<strong>Total: R$ " + total.toFixed(2) + "</strong>";
 }
 
-/* 🔥 ATUALIZADO */
 function sendWhats() {
     if(cart.length === 0) {
         alert("Carrinho vazio!");
